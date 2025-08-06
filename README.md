@@ -1,1 +1,1 @@
-This is a simple Readme file
+This index.html contains a simple static webpage showcasing CyberSecurity
