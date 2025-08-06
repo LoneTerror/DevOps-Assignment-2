@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Fortress | Cybersecurity Hub</title>
+    
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        /* * General Styling & Animated Gradient Background
+         * -----------------------------------------------
+         * This section sets up the base styles and a mesmerizing,
+         * slow-moving gradient animation for the background.
+         */
+        :root {
+            --primary-font: 'Roboto Mono', monospace;
+            --secondary-font: 'Orbitron', sans-serif;
+            --text-color: #e0e0e0;
+            /* CHANGED: Switched to a darker, muted cyan accent */
+            --accent-color: #00c2c7;
+            --card-bg-color: rgba(13, 17, 23, 0.25); 
+            /* CHANGED: Border color now uses the new dark accent */
+            --border-color: rgba(0, 194, 199, 0.3); 
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--primary-font);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* CHANGED: New dark gradient with deep navy, crimson, and charcoal */
+            background: linear-gradient(45deg, #0d1117, #2c0b0e, #1a0a1f, #0d1117);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            overflow: hidden; /* Prevents scrollbars from the animation */
+        }
+
+        /* Keyframe animation for the background gradient */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* * Glassmorphism Card
+         * -------------------
+         * This is the main content container. It uses a semi-transparent
+         * background and a backdrop-filter to create a "frosted glass" effect.
+         */
+        .glass-container {
+            width: 90%;
+            max-width: 650px;
+            padding: 40px;
+            background: var(--card-bg-color);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); /* For Safari support */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .glass-container:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 25px rgba(0, 194, 199, 0.3);
+        }
+
+        /* * Content & Typography
+         * --------------------
+         * Styling for the text elements inside the card.
+         * A modern, sci-fi font is used for the main heading.
+         */
+        h1 {
+            font-family: var(--secondary-font);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 15px var(--accent-color);
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        /* * Decorative Button
+         * -----------------
+         * A simple, elegant button that complements the design.
+         */
+        .decorative-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--accent-color);
+            background-color: transparent;
+            border: 1px solid var(--accent-color);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .decorative-btn:hover {
+            background-color: var(--accent-color);
+            /* CHANGED: Text color on hover is now a dark charcoal */
+            color: #0d1117;
+            box-shadow: 0 0 25px var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .glass-container {
+                padding: 30px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The main content container with the glass effect -->
+    <div class="glass-container">
+        <h1>Digital Fortress</h1>
+        <p>In the sprawling network of the digital age, we are the guardians. We build the firewalls, hunt the threats in the shadows, and defend the data that powers our world. Welcome to the frontline.</p>
+        <a href="#" class="decorative-btn">Analyze Threats</a>
+    </div>
+
+</body>
+</html>
