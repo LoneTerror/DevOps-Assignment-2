@@ -16,7 +16,7 @@ pipeline {
                     echo "Building the Docker image locally..."
                     // The '-t' flag tags the image with a name (my-local-webapp)
                     // The '.' refers to the current directory as the build context
-                    sh 'docker build -t DevOps-Assign-2:latest .'
+                    sh 'docker build -t devops-assign-2:latest .'
                 }
             }
         }
@@ -41,7 +41,7 @@ pipeline {
                     // --name: assigns a specific name to the container
                     // -p 8080:80: maps port 8080 on the Rocky Linux host to port 80 in the container
                     // my-local-webapp:latest: specifies the image to run
-                    sh 'docker run -d --name DevOps-Assign-2 -p 8081:80 DevOps-Assign-2:latest'
+                    sh 'docker run -d --name DevOps-Assign-2 -p 8081:80 devops-assign-2:latest'
                 }
             }
         }
